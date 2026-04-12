@@ -102,8 +102,7 @@
         };
 
         layer_5 {
-            status = "reserved";
-            display-name = "Brank Layer";
+            display-name = "Cursor Layer";
             bindings = <
                 &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
                 &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
@@ -113,7 +112,6 @@
         };
 
         layer_6 {
-            status = "reserved";
             display-name = "Brank Layer";
             bindings = <
                 &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
@@ -124,7 +122,6 @@
         };
 
         layer_7 {
-            status = "reserved";
             display-name = "Brank Layer";
             bindings = <
                 &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &trans
