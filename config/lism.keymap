@@ -65,23 +65,13 @@
 &kp Q             &kp W         &kp E                    &kp R           &kp T                                      &kp Y        &kp U           &kp I                     &kp O    &kp P
 &kp A             &kp S         &kp D                    &kp F           &kp G                                      &kp H        &kp J           &kp K                     &kp L    &kp SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C                    &kp V           &kp B                                      &kp N        &kp M           &kp COMMA                 &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_CONTROL  &kp LEFT_GUI  &mt LEFT_ALT LANGUAGE_2  &kp LS(LG(N4))  &lt 2 SPACE  &lt 5 ESC    &lt 5 BACKSPACE  &lt 3 ENTER  &kp LS(LG(N4))  &mt RIGHT_ALT LANGUAGE_1  &none    &lt 4 BACKSLASH
+&kp LEFT_CONTROL  &kp LEFT_GUI  &mt LEFT_ALT LANGUAGE_2  &kp LS(LG(N4))  &lt 1 SPACE  &lt 3 ESC    &lt 3 BACKSPACE  &lt 2 ENTER  &kp LS(LG(N4))  &mt RIGHT_ALT LANGUAGE_1  &none    &lt 5 BACKSLASH
             >;
 
             sensor-bindings = <&rsr_scrl &rsr_scrl>;
         };
 
         layer_1 {
-            display-name = "Mouse Layer";
-            bindings = <
-&trans  &kp HOME  &trans    &kp END   &kp PAGE_UP                      &msc SCRL_UP    &trans          &mkp MB3         &trans  &trans
-&trans  &trans    &mkp MB4  &mkp MB5  &kp PAGE_DOWN                    &msc SCRL_DOWN  &mkp MB1        &mkp MB2         &trans  &trans
-&trans  &trans    &trans    &trans    &trans                           &trans          &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans    &trans    &trans    &trans         &trans    &trans  &trans          &trans          &trans           &trans  &trans
-            >;
-        };
-
-        layer_2 {
             display-name = "Number Layer";
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                        &kp NUMBER_6  &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9          &kp NUMBER_0
@@ -91,9 +81,10 @@
             >;
 
             sensor-bindings = <&encoder_kp C_VOL_DN C_VOL_UP>;
+            label = "Number Layer";
         };
 
-        layer_3 {
+        layer_2 {
             display-name = "Mark Layer";
             bindings = <
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET  &kp AMPERSAND     &kp ASTERISK       &kp MINUS  &kp UNDERSCORE
@@ -101,19 +92,11 @@
 &kp F1           &kp F2       &kp F3    &kp F4      &kp F5                         &kp F6     &kp F7            &kp F8             &kp F9     &kp F10
 &trans           &trans       &trans    &trans      &trans       &trans    &trans  &trans     &trans            &none              &none      &none
             >;
+
+            label = "Mark Layer";
         };
 
-        layer_4 {
-            display-name = "Device Layer";
-            bindings = <
-&none        &none           &none  &none  &bt BT_CLR                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&none        &none           &none  &none  &none                                &none         &none         &none         &none         &none
-&sys_reset   &none           &none  &none  &none                                &none         &none         &none         &none         &sys_reset
-&bootloader  &bt BT_CLR_ALL  &none  &none  &none       &none    &studio_unlock  &none         &none         &none         &none         &bootloader
-            >;
-        };
-
-        layer_5 {
+        layer_3 {
             display-name = "Cursor Layer";
             bindings = <
 &none                              &kp HOME            &kp UP_ARROW    &kp END              &kp PAGE_UP                                &none   &kp LS(LC(TAB))  &none              &kp RC(TAB)       &kp PRINTSCREEN
@@ -123,6 +106,31 @@
             >;
 
             sensor-bindings = <&encoder_kp C_VOL_DN C_VOL_UP>;
+            label = "Cursor Layer";
+        };
+
+        layer_4 {
+            display-name = "Mouse Layer";
+            bindings = <
+&trans  &kp HOME  &trans    &kp END   &kp PAGE_UP                      &msc SCRL_UP    &trans          &mkp MB3         &trans  &trans
+&trans  &trans    &mkp MB4  &mkp MB5  &kp PAGE_DOWN                    &msc SCRL_DOWN  &mkp MB1        &mkp MB2         &trans  &trans
+&trans  &trans    &trans    &trans    &trans                           &trans          &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans    &trans    &trans    &trans         &trans    &trans  &trans          &trans          &trans           &trans  &trans
+            >;
+
+            label = "Mouse Layer";
+        };
+
+        layer_5 {
+            display-name = "Device Layer";
+            bindings = <
+&none        &none           &none  &none  &bt BT_CLR                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&none        &none           &none  &none  &none                                &none         &none         &none         &none         &none
+&sys_reset   &none           &none  &none  &none                                &none         &none         &none         &none         &sys_reset
+&bootloader  &bt BT_CLR_ALL  &none  &none  &none       &none    &studio_unlock  &none         &none         &none         &none         &bootloader
+            >;
+
+            label = "Device Layer";
         };
 
         layer_6 {
