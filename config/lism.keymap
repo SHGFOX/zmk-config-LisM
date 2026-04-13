@@ -99,7 +99,7 @@
         layer_3 {
             display-name = "Cursor Layer";
             bindings = <
-&none                              &kp HOME            &kp UP_ARROW    &kp END              &kp PAGE_UP                                &none   &kp LS(LC(TAB))  &none              &kp RC(TAB)       &kp PRINTSCREEN
+&kp TAB                            &kp HOME            &kp UP_ARROW    &kp END              &kp PAGE_UP                                &none   &kp LS(LC(TAB))  &none              &kp RC(TAB)       &kp PRINTSCREEN
 &none                              &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN                              &none   &kp C_AC_BACK    &none              &kp C_AC_FORWARD  &none
 &mt LEFT_SHIFT LS(LG(LEFT_ARROW))  &kp LG(LEFT_ARROW)  &none           &kp LG(RIGHT_ARROW)  &kp LS(LG(RIGHT_ARROW))                    &none   &kp C_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp RIGHT_SHIFT
 &trans                             &trans              &trans          &trans               &trans                   &trans    &trans  &trans  &trans           &none              &none             &kp INSERT
