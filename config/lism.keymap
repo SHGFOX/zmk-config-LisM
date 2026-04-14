@@ -91,10 +91,10 @@
         layer_3 {
             display-name = "Cursor Layer";
             bindings = <
-&kp TAB                            &kp HOME            &kp UP_ARROW    &kp END              &kp PAGE_UP                                    &none   &kp LS(LC(TAB))  &none              &kp RC(TAB)       &kp PRINTSCREEN
-&none                              &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN                                  &none   &kp C_AC_BACK    &none              &kp C_AC_FORWARD  &none
-&mt LEFT_SHIFT LS(LG(LEFT_ARROW))  &kp LG(LEFT_ARROW)  &none           &kp LG(RIGHT_ARROW)  &kp LS(LG(RIGHT_ARROW))                        &none   &kp C_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp RIGHT_SHIFT
-&trans                             &trans              &trans          &trans               &trans                   &trans    &kp DELETE  &trans  &trans           &trans             &trans            &none
+&kp TAB                            &kp HOME            &msc SCRL_UP    &kp END              &kp PAGE_UP                                    &kp RS(RC(TAB))  &kp C_AC_BACK   &kp UP_ARROW       &kp C_AC_FORWARD  &kp RC(TAB)
+&none                              &msc SCRL_LEFT      &msc SCRL_DOWN  &msc SCRL_RIGHT      &kp PAGE_DOWN                                  &none            &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW   &none
+&mt LEFT_SHIFT LS(LG(LEFT_ARROW))  &kp LG(LEFT_ARROW)  &none           &kp LG(RIGHT_ARROW)  &kp LS(LG(RIGHT_ARROW))                        &none            &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp RIGHT_SHIFT
+&trans                             &trans              &trans          &trans               &trans                   &trans    &kp DELETE  &trans           &trans          &trans             &trans            &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&encoder_kp C_VOL_DN C_VOL_UP>;
@@ -104,10 +104,10 @@
         layer_4 {
             display-name = "Mouse Layer";
             bindings = <
-&trans  &kp HOME  &trans    &kp END   &kp PAGE_UP                      &msc SCRL_UP    &trans          &mkp MB3         &trans  &trans
-&trans  &trans    &mkp MB4  &mkp MB5  &kp PAGE_DOWN                    &msc SCRL_DOWN  &mkp MB1        &mkp MB2         &trans  &trans
-&trans  &trans    &trans    &trans    &trans                           &trans          &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans    &trans    &trans    &trans         &trans    &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &kp HOME        &msc SCRL_UP    &kp END          &kp PAGE_UP                      &studio_unlock  &mkp MB4  &none     &mkp MB5  &none
+&trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp PAGE_DOWN                    &none           &mkp MB1  &mkp MB3  &mkp MB2  &none
+&trans  &trans          &trans          &trans           &trans                           &none           &none     &none     &none     &none
+&trans  &trans          &trans          &trans           &trans         &trans    &trans  &trans          &trans    &trans    &trans    &trans
             >;
 
             label = "Mouse Layer";
