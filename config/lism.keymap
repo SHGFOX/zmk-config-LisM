@@ -54,10 +54,10 @@
         default_layer {
             display-name = "Default Layer";
             bindings = <
-&kp Q             &kp W         &kp E                    &kp R           &kp T                                      &kp Y        &kp U           &kp I                     &kp O              &kp P
+&lt 4 Q           &kp W         &kp E                    &kp R           &kp T                                      &kp Y        &kp U           &kp I                     &kp O              &kp P
 &kp A             &kp S         &kp D                    &kp F           &kp G                                      &kp H        &kp J           &kp K                     &kp L              &kp SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C                    &kp V           &kp B                                      &kp N        &kp M           &kp COMMA                 &kp DOT            &mt RIGHT_SHIFT SLASH
-&kp LEFT_CONTROL  &kp LEFT_GUI  &mt LEFT_ALT LANGUAGE_2  &kp LS(LG(N4))  &lt 1 SPACE  &lt 3 ESC    &lt 3 BACKSPACE  &lt 2 ENTER  &kp LS(LG(N4))  &mt RIGHT_ALT LANGUAGE_1  &kp RIGHT_CONTROL  &lt 5 BACKSLASH
+&kp LEFT_CONTROL  &kp LEFT_GUI  &mt LEFT_ALT LANGUAGE_2  &kp LS(LG(N4))  &lt 1 SPACE  &lt 3 ESC    &lt 3 BACKSPACE  &lt 2 ENTER  &kp LS(LG(N4))  &mt RIGHT_ALT LANGUAGE_1  &kp RIGHT_CONTROL  &lt 6 BACKSLASH
             >;
 
             sensor-bindings = <&rsr_scrl &rsr_scrl>;
@@ -82,7 +82,7 @@
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                        &kp CARET  &kp AMPERSAND         &kp ASTERISK           &kp MINUS         &kp UNDERSCORE
 &kp GRAVE        &kp TILDE    &none     &none       &none                              &none      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL         &kp PLUS
 &kp LEFT_SHIFT   &none        &none     &none       &none                              &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans           &trans       &trans    &trans      &trans       &trans    &kp DELETE  &trans     &trans                &trans                 &trans            &none
+&trans           &trans       &trans    &trans      &trans       &trans    &kp DELETE  &trans     &trans                &trans                 &none             &none
             >;
 
             label = "Mark Layer";
@@ -91,10 +91,10 @@
         layer_3 {
             display-name = "Cursor Layer";
             bindings = <
-&kp TAB                            &kp HOME            &msc SCRL_UP    &kp END              &kp PAGE_UP                                    &kp RS(RC(TAB))  &kp C_AC_BACK   &kp UP_ARROW       &kp C_AC_FORWARD  &kp RC(TAB)
-&none                              &msc SCRL_LEFT      &msc SCRL_DOWN  &msc SCRL_RIGHT      &kp PAGE_DOWN                                  &none            &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW   &none
-&mt LEFT_SHIFT LS(LG(LEFT_ARROW))  &kp LG(LEFT_ARROW)  &none           &kp LG(RIGHT_ARROW)  &kp LS(LG(RIGHT_ARROW))                        &none            &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp RIGHT_SHIFT
-&trans                             &trans              &trans          &trans               &trans                   &trans    &kp DELETE  &trans           &trans          &trans             &trans            &kp PRINTSCREEN
+&kp TAB                            &kp HOME            &msc SCRL_UP    &kp END              &kp PAGE_UP                                    &kp RS(RC(TAB))  &kp C_AC_BACK   &kp UP_ARROW    &kp C_AC_FORWARD  &kp RC(TAB)
+&none                              &msc SCRL_LEFT      &msc SCRL_DOWN  &msc SCRL_RIGHT      &kp PAGE_DOWN                                  &none            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &none
+&mt LEFT_SHIFT LS(LG(LEFT_ARROW))  &kp LG(LEFT_ARROW)  &none           &kp LG(RIGHT_ARROW)  &kp LS(LG(RIGHT_ARROW))                        &none            &none           &none           &none             &none
+&trans                             &trans              &trans          &trans               &trans                   &trans    &kp DELETE  &trans           &trans          &trans          &none             &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&encoder_kp C_VOL_DN C_VOL_UP>;
@@ -102,18 +102,30 @@
         };
 
         layer_4 {
+            display-name = "Brank Layer";
+            bindings = <
+&none   &none   &none   &none   &none                     &none   &kp C_PREV    &kp C_SLOW         &kp C_NEXT          &none
+&none   &none   &none   &none   &none                     &none   &kp C_REWIND  &kp C_PLAY_PAUSE   &kp C_FAST_FORWARD  &none
+&none   &none   &none   &none   &none                     &none   &kp C_MUTE    &kp C_VOLUME_DOWN  &kp C_VOL_UP        &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans             &none               &none
+            >;
+
+            label = "Media Layer";
+        };
+
+        layer_5 {
             display-name = "Mouse Layer";
             bindings = <
-&trans  &kp HOME        &msc SCRL_UP    &kp END          &kp PAGE_UP                      &studio_unlock  &mkp MB4  &none     &mkp MB5  &none
-&trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp PAGE_DOWN                    &none           &mkp MB1  &mkp MB3  &mkp MB2  &none
-&trans  &trans          &trans          &trans           &trans                           &none           &none     &none     &none     &none
-&trans  &trans          &trans          &trans           &trans         &trans    &trans  &trans          &trans    &trans    &trans    &trans
+&none   &kp HOME        &msc SCRL_UP    &kp END          &kp PAGE_UP                      &studio_unlock  &mkp MB4  &none     &mkp MB5  &none
+&none   &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp PAGE_DOWN                    &none           &mkp MB1  &mkp MB3  &mkp MB2  &none
+&none   &none           &none           &none            &none                            &none           &none     &none     &none     &none
+&trans  &trans          &trans          &trans           &trans         &trans    &trans  &trans          &trans    &trans    &trans    &none
             >;
 
             label = "Mouse Layer";
         };
 
-        layer_5 {
+        layer_6 {
             display-name = "Device Layer";
             bindings = <
 &none        &none           &none  &none  &bt BT_CLR                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
@@ -123,16 +135,6 @@
             >;
 
             label = "Device Layer";
-        };
-
-        layer_6 {
-            display-name = "Brank Layer";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
         };
 
         layer_7 {
